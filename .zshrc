@@ -15,7 +15,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="linuxonly"
+ZSH_THEME="robbyrussell"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -77,7 +77,9 @@ ZSH_THEME="linuxonly"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git kubectl history emoji encode64 zsh-autosuggestions sudo)
+plugins=(git kubectl history encode64 sudo zsh-autosuggestions zsh-syntax-highlighting)
+
+ZSH_THEME="agnoster"
 
 source $ZSH/oh-my-zsh.sh
 
@@ -109,16 +111,10 @@ source $ZSH/oh-my-zsh.sh
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-export PATH=$PATH:/home/bleach7/Documents/Apps/nvim/bin
-
-source /home/bleach7/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # pnpm
-export PNPM_HOME="/home/bleach7/.local/share/pnpm"
+export PNPM_HOME="/home/worldstopstalker/.local/share/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
